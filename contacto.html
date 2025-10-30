@@ -1,0 +1,123 @@
+<!-- contacto.html (Página de Contacto) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Flipside Burgers Inspired</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background-color: #fff9e6; color: #333; }
+        header { background: linear-gradient(90deg, #ff6347, #ffd700); color: #fff; padding: 40px 20px; text-align: center; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin: 0; text-shadow: 2px 2px #000; }
+        nav { background-color: #333; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; align-items: center; }
+        nav a { color: #fff; margin: 0 20px; text-decoration: none; font-weight: bold; font-size: 18px; transition: color 0.3s; }
+        nav a:hover { color: #ffd700; }
+        .user-info { color: #ffd700; font-size: 18px; position: absolute; right: 20px; }
+        .section { padding: 60px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
+        form { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+        input, textarea { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; }
+        button { background-color: #1e90ff; color: #fff; border: none; padding: 15px 30px; border-radius: 5px; cursor: pointer; font-size: 18px; font-weight: bold; transition: background 0.3s; }
+        button:hover { background-color: #4169e1; }
+        .contact-info { margin-top: 40px; font-size: 18px; }
+        .contact-info p { margin: 10px 0; display: flex; align-items: center; justify-content: center; }
+        .contact-info img { width: 30px; margin-right: 10px; }
+        .map { width: 100%; height: 300px; margin-top: 20px; border-radius: 15px; }
+        footer { background: linear-gradient(90deg, #ff6347, #ffd700); color: #fff; text-align: center; padding: 20px; font-size: 14px; }
+        /* Estilo para el mensaje de éxito */
+        .success-message {
+            display: none;
+            background-color: #28a745;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body onload="displayUserInfo()">
+    <header>
+        <h1>Contacto</h1>
+    </header>
+    <nav>
+    <div>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="menu.html">Menú</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="contacto.html">Contacto</a>
+    
+        <a href="terminos.html">Términos</a>
+        <a href="login.html">Login</a>
+        <a href="#" onclick="logout()" id="logoutLink" style="display: none;">Cerrar Sesión</a>
+    </div>
+        <span class="user-info" id="userInfo"></span>
+    </nav>
+    <div class="section">
+        <h2>Envíanos un Mensaje</h2>
+        <form id="contactForm">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="email" id="correo" placeholder="Correo" required>
+            <textarea id="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="successMessage" class="success-message">
+            Mensaje enviado correctamente, pronto nos contactaremos contigo.
+        </div>
+        <div class="contact-info">
+            <p><img src="data:image/jpeg;base64,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" alt="WhatsApp">WhatsApp: +123 456 7890</p>
+            <p><img src="data:image/png;base64,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" alt="Correo">Correo: info@flipsideburgers.com</p>
+            <p><img src="data:image/png;base64,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" alt="Redes">Redes Sociales: @flipsideburgers en Instagram, Facebook, X</p>
+        </div>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.6583!2d-99.133208!3d19.432608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b4b6db70f%3A0x1e5a8d8e7f6d0f0!2sBurger+King!5e0!3m2!1sen!2smx!4v1620000000000" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <footer>
+        <p>&copy; 2025 Flipside Burgers Inspired. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function displayUserInfo() {
+            const user = JSON.parse(localStorage.getItem('loggedInUser'));
+            if (user) {
+                document.getElementById('userInfo').textContent = `Bienvenido, ${user.username}`;
+                document.getElementById('logoutLink').style.display = 'inline';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('loggedInUser');
+            localStorage.removeItem('cart');
+            window.location.reload();
+        }
+
+        function sendMessage(event) {
+            event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+            // Obtener valores de los campos
+            const nombre = document.getElementById('nombre').value.trim();
+            const correo = document.getElementById('correo').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            // Validar que todos los campos estén llenos
+            if (!nombre || !correo || !mensaje) {
+                alert('Por favor, completa todos los campos.');
+                return;
+            }
+
+            // Mostrar mensaje de éxito
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+
+            // Ocultar el mensaje después de 5 segundos
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+                document.getElementById('contactForm').reset(); // Limpiar el formulario
+            }, 5000);
+        }
+
+        // Asignar el evento al formulario
+        document.getElementById('contactForm').addEventListener('submit', sendMessage);
+    </script>
+</body>
+</html>

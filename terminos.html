@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - Flipside Burgers Inspired</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background-color: #fff9e6; color: #333; }
+        header { background: linear-gradient(90deg, #ff6347, #ffd700); color: #fff; padding: 40px 20px; text-align: center; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin: 0; text-shadow: 2px 2px #000; }
+        nav { background-color: #333; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; align-items: center; }
+        nav a { color: #fff; margin: 0 20px; text-decoration: none; font-weight: bold; font-size: 18px; transition: color 0.3s; }
+        nav a:hover { color: #ffd700; }
+        .user-info { color: #ffd700; font-size: 18px; position: absolute; right: 20px; }
+
+        .content { max-width: 1000px; margin: 40px auto; background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 8px 18px rgba(0,0,0,0.1); }
+        h2 { color: #ff6347; font-family: 'Playfair Display', serif; }
+        p { font-size: 18px; line-height: 1.7; }
+        ol li { margin-bottom: 10px; }
+
+        footer { background: linear-gradient(90deg, #ff6347, #ffd700); color: #fff; text-align: center; padding: 20px; font-size: 14px; margin-top: 40px; }
+    </style>
+</head>
+<body onload="displayUserInfo()">
+<header>
+    <h1>Términos y Condiciones</h1>
+</header>
+<nav>
+    <div>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="menu.html">Menú</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="contacto.html">Contacto</a>
+     
+        <a href="terminos.html">Términos</a>
+        <a href="login.html">Login</a>
+        <a href="#" onclick="logout()" id="logoutLink" style="display: none;">Cerrar Sesión</a>
+    </div>
+    <span class="user-info" id="userInfo"></span>
+</nav>
+
+<div class="content">
+    <p><strong>Última actualización:</strong> 30 de octubre de 2025</p>
+
+    <h2>1. Definiciones</h2>
+    <p>En estos términos, "Sistema" se refiere al sitio web, aplicación web y móvil, panel de administración, base de datos, servicios de pedidos y herramientas ofrecidas por Flipside Burgers Inspired. "Usuario" es cualquier persona que accede, navega o utiliza nuestros servicios. "Cliente" es quien realiza un pedido o compra productos dentro de nuestro sistema.</p>
+
+    <h2>2. Condiciones Generales de Uso</h2>
+    <p>El usuario acepta usar este sistema únicamente para fines legales y conforme a las leyes vigentes. Está estrictamente prohibido:</p>
+    <ul>
+        <li>Realizar actividades que puedan dañar o alterar el funcionamiento del sistema.</li>
+        <li>Crear cuentas falsas o usar información fraudulenta.</li>
+        <li>Intentar acceder a áreas restringidas, servidores o bases de datos.</li>
+        <li>Modificar, distribuir, copiar o reproducir contenido sin autorización.</li>
+    </ul>
+
+    <h2>3. Cuentas de usuario y seguridad</h2>
+    <p>El usuario es responsable de mantener su cuenta segura, incluyendo su contraseña y dispositivo de acceso. Nos reservamos el derecho de suspender cuentas que presenten actividad sospechosa.</p>
+
+    <h3>Responsabilidades del usuario:</h3>
+    <ul>
+        <li>Mantener la información personal actualizada y verídica.</li>
+        <li>No compartir credenciales de acceso.</li>
+        <li>Reportar accesos no autorizados inmediatamente.</li>
+    </ul>
+
+    <h2>4. Privacidad y Protección de Datos</h2>
+    <p>El sistema almacena información necesaria para el funcionamiento de la plataforma, como nombre, correo, teléfono y pedidos. No vendemos ni compartimos información personal con terceros sin autorización del usuario, excepto por obligación legal.</p>
+    <p>El usuario puede solicitar eliminación o modificación de sus datos personales.</p>
+
+    <h2>5. Pedidos, Pagos y Entregas</h2>
+    <p>Al realizar un pedido el usuario acepta:</p>
+    <ul>
+        <li>Proporcionar datos reales y correctos de entrega.</li>
+        <li>Realizar pago según el método disponible (en línea o al recibir según el local).</li>
+        <li>Las modificaciones o cancelaciones solo son posibles antes de que el pedido entre en preparación.</li>
+    </ul>
+
+    <h2>6. Propiedad Intelectual</h2>
+    <p>Todo contenido del sistema, incluyendo imágenes, logotipos, menús, diseños, textos, software, scripts y estilos, pertenece a Flipside Burgers Inspired. Queda prohibido su uso sin autorización escrita.</p>
+
+    <h2>7. Limitación de Responsabilidad</h2>
+    <p>No somos responsables por interrupciones de servicio causadas por factores externos como fallas técnicas, proveedores externos, ataques digitales o eventos fuera de control.</p>
+    <p>No garantizamos disponibilidad permanente del servicio, aunque trabajamos para mantenerlo estable y seguro.</p>
+
+    <h2>8. Modificaciones del Servicio</h2>
+    <p>Podemos modificar menús, precios, disponibilidad de productos, funciones del sistema o estos términos sin notificación previa cuando sea necesario para operación y seguridad.</p>
+
+    <h2>9. Suspensión y Terminación</h2>
+    <p>Nos reservamos el derecho de suspender o eliminar cuentas por actividades ilegales, abuso del sistema o incumplimiento de términos.</p>
+
+    <h2>10. Ley Aplicable</h2>
+    <p>Estos términos se rigen bajo las leyes de México. En caso de disputa, las autoridades correspondientes de México serán quienes determinen resolución.</p>
+
+    <h2>11. Contacto</h2>
+    <p>Para dudas o aclaraciones, escribe a: <strong>soporte@flipsideburgers.com</strong></p> 
+
+<h2>10. Políticas de Envíos y Entregas</h2>
+<p>Las órdenes se procesan en el orden en que son recibidas. El tiempo de entrega puede variar dependiendo de la disponibilidad de productos, ubicación del cliente y carga operativa. El Usuario será notificado en caso de retrasos significativos. La entrega se considera completada al momento de llegar a la dirección proporcionada en el pedido.</p>
+
+<h2>11. Reembolsos, Cancelaciones y Devoluciones</h2>
+<p>Por tratarse de alimentos preparados, las devoluciones no aplican salvo error comprobable en pedido o defecto en productos. Para solicitar reembolso, el Usuario deberá presentar evidencia fotográfica y ticket digital dentro de las primeras dos horas posteriores a la compra. El negocio se reserva el derecho de analizar y determinar si procede.</p>
+
+<h2>12. Conducta del Usuario</h2>
+<p>El Usuario se compromete a utilizar el sistema de manera responsable, sin generar contenidos ofensivos, fraudulentos, difamatorios o cualquier acción que afecte la operación y reputación del negocio. Se prohíbe el uso del sistema para actividades ilícitas o automatización sin consentimiento.</p>
+
+<h2>13. Seguridad del Sistema y Disponibilidad</h2>
+<p>El sistema puede estar sujeto a mantenimientos, actualizaciones o fallas técnicas. No garantizamos disponibilidad ininterrumpida del servicio, pero trabajaremos para restaurarlo lo más pronto posible. El Usuario acepta que las interrupciones no generan responsabilidad ni compensación automática.</p>
+
+<h2>14. Protección de Datos y Privacidad</h2>
+<p>La información del Usuario será protegida y utilizada únicamente para fines operativos, administrativos y comerciales del negocio, conforme a normas aplicables de protección de datos. No se comparte información con terceros sin autorización expresa del Usuario, salvo obligación legal.</p>
+
+<h2>15. Modificaciones a los Términos</h2>
+<p>El negocio puede actualizar estos términos en cualquier momento con el fin de mejorar el servicio y cumplir con normativas vigentes. Las modificaciones entran en vigor al ser publicadas en esta página. Se recomienda revisar esta sección regularmente.</p>
+
+<h2>16. Legislación Aplicable</h2>
+<p>Estos términos serán regidos por las leyes aplicables en la jurisdicción donde opera el negocio. En caso de conflicto, las partes se someterán a las autoridades competentes que correspondan.</p>
+
+<h2>17. Contacto</h2>
+<p>Para dudas, aclaraciones o solicitudes relacionadas con estos términos y condiciones, el Usuario puede contactarnos mediante los medios oficiales de comunicación publicados en el sistema.</p>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 Flipside Burgers Inspired. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+function displayUserInfo() {
+    const user = JSON.parse(localStorage.getItem('loggedInUser'));
+    if (user) {
+        document.getElementById('userInfo').textContent = `Bienvenido, ${user.username}`;
+        document.getElementById('logoutLink').style.display = 'inline';
+    }
+}
+function logout() {
+    localStorage.removeItem('loggedInUser');
+    localStorage.removeItem('cart');
+    window.location.reload();
+}
+</script>
+
+</body>
+</html>
